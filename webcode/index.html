@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Viesdi — учись программировать</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;900&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body class="lock">
+    <div id="splash" tabindex="0" aria-label="Войти на сайт">
+      <h1 class="logo">VIESDI</h1>
+      <p class="hint">нажми, чтобы войти</p>
+    </div>
+
+    <header class="nav">
+      <a href="#top" class="brand" id="brand">viesdi</a>
+      <nav>
+        <a href="#courses">Курсы</a>
+        <a href="#path">Путь</a>
+        <a href="#lab">Песочница</a>
+        <a href="#platform">Платформа</a>
+        <a href="#secrets">Секреты</a>
+      </nav>
+      <div class="xp" aria-hidden="true"><i></i></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="grid-bg"></div>
+        <div class="hero-text">
+          <h2>Учись писать код.<br />Без воды.</h2>
+          <pre
+            class="term"
+            aria-label="Пример кода"
+          ><code id="term"></code></pre>
+          <a class="btn" href="#courses">Начать учиться</a>
+        </div>
+        <img class="hero-img" src="img/monitor.svg" alt="Монитор с кодом" />
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div>
+          <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span
+          ><span>PYTHON</span><span>GIT</span>
+        </div>
+      </div>
+
+      <section id="courses" class="wrap">
+        <h2>Курсы</h2>
+        <div class="cards">
+          <article class="card">
+            <button class="card-head" aria-expanded="false">
+              <img class="ico" src="img/html.svg" alt="" /><span>HTML</span
+              ><small>Скелет любой страницы</small>
+            </button>
+            <div class="card-body">
+              <div>
+                <ol>
+                  <li>
+                    Теги: <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>,
+                    <code>&lt;a&gt;</code>
+                  </li>
+                  <li>Списки, картинки, формы</li>
+                  <li>Семантика: header, main, footer</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <button class="card-head" aria-expanded="false">
+              <img class="ico" src="img/css.svg" alt="" /><span>CSS</span
+              ><small>Цвет, сетка, анимации</small>
+            </button>
+            <div class="card-body">
+              <div>
+                <ol>
+                  <li>Селекторы и каскад</li>
+                  <li>Flexbox и Grid</li>
+                  <li><code>@keyframes</code> и transition</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <button class="card-head" aria-expanded="false">
+              <img class="ico" src="img/js.svg" alt="" /><span>JavaScript</span
+              ><small>Оживляем страницу</small>
+            </button>
+            <div class="card-body">
+              <div>
+                <ol>
+                  <li>Переменные и функции</li>
+                  <li>События: клик, ввод, клавиши</li>
+                  <li>DOM: менять страницу из кода</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <button class="card-head" aria-expanded="false">
+              <img class="ico" src="img/py.svg" alt="" /><span>Python</span
+              ><small>Скрипты, боты, данные</small>
+            </button>
+            <div class="card-body">
+              <div>
+                <ol>
+                  <li><code>print()</code> и переменные</li>
+                  <li>Циклы и условия</li>
+                  <li>Свой Telegram-бот</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="path" class="wrap">
+        <h2>Как учиться</h2>
+        <div class="paths">
+          <figure class="path tilt">
+            <img src="img/gamepad.svg" alt="Геймпад" />
+            <h3>Учись как играешь</h3>
+            <p>Короткие уровни: прочитал, написал, проверил.</p>
+          </figure>
+          <figure class="path tilt">
+            <img src="img/bug.svg" alt="Пиксельный баг" />
+            <h3>Лови баги</h3>
+            <p>Ошибка в коде — это не провал, а квест.</p>
+          </figure>
+          <figure class="path tilt">
+            <img src="img/trophy.svg" alt="Кубок" />
+            <h3>Собирай победы</h3>
+            <p>Каждый маленький проект — достижение.</p>
+          </figure>
+          <figure class="path tilt">
+            <img src="img/rocket.svg" alt="Ракета" />
+            <h3>Запускай проекты</h3>
+            <p>Выложи свой сайт в интернет и покажи друзьям.</p>
+          </figure>
+        </div>
+      </section>
+
+      <section id="lab" class="wrap">
+        <h2>Песочница</h2>
+        <p class="lead">
+          Меняй код слева — результат справа обновляется сразу.
+        </p>
+        <div class="lab">
+          <textarea id="ed" spellcheck="false" aria-label="Редактор кода">
+<h1 class="t">Привет, Viesdi</h1>
+<style>
+  body{background:#000;display:grid;place-items:center;height:100vh;margin:0}
+  .t{color:#fff;font:900 2rem sans-serif;animation:s 1s infinite alternate}
+  @keyframes s{to{transform:scale(1.2) rotate(4deg)}}
+</style></textarea
+          >
+          <iframe id="out" title="Результат"></iframe>
+        </div>
+      </section>
+
+      <section id="platform" class="wrap">
+        <h2>Платформа</h2>
+        <p class="lead">
+          Из чего состоит сайт для обучения: восемь модулей и то, как их
+          собрать.
+        </p>
+        <div class="mods">
+          <figure class="path mod tilt">
+            <img src="img/m-sandbox.svg" alt="" />
+            <h3>Песочница и автопроверка</h3>
+            <p>
+              Редактор с подсветкой, мгновенный запуск, тесты с граничными
+              значениями и понятные подсказки.
+            </p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/m-map.svg" alt="" />
+            <h3>Дорожные карты</h3>
+            <p>
+              Граф навыков от нуля до Junior: новые узлы открываются по порядку.
+              Шпаргалки — в один клик.
+            </p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/m-streak.svg" alt="" />
+            <h3>Геймификация</h3>
+            <p>Streak с заморозкой, XP, уровни, ачивки и сквозные квесты.</p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/m-community.svg" alt="" />
+            <h3>Сообщество</h3>
+            <p>
+              Чужие решения открываются после твоего. Код-ревью по строкам и
+              таблицы лидеров.
+            </p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/m-ai.svg" alt="" />
+            <h3>AI-помощники</h3>
+            <p>
+              Ментор без готового кода и перевод ошибок компилятора на
+              человеческий язык.
+            </p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/m-career.svg" alt="" />
+            <h3>Путь в профессию</h3>
+            <p>
+              Собеседования с таймером, экспорт в GitHub и конструктор резюме.
+            </p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/m-egg.svg" alt="" />
+            <h3>Пасхалки</h3>
+            <p>Консоль, код Konami, команда в песочнице и 404 со змейкой.</p>
+          </figure>
+          <figure class="path mod tilt">
+            <img src="img/gamepad.svg" alt="" />
+            <h3>Игровые интерактивы</h3>
+            <p>
+              Битва с боссом, кодинг-тир, гонки по набору, ARG и магазин за XP.
+            </p>
+          </figure>
+        </div>
+      </section>
+
+      <section id="arch" class="wrap reveal">
+        <h2>Где запускать код</h2>
+        <p class="lead">
+          Чужой код нельзя запускать «просто так». Сравнение двух подходов
+          (оценки наши, не замеры):
+        </p>
+        <div class="vs">
+          <div class="side">
+            <h3>На сервере</h3>
+            <p>
+              Docker-контейнеры с лимитами, изоляция gVisor или Firecracker,
+              очередь задач.
+            </p>
+            <div class="bar">
+              <span>Нагрузка на сервер</span><b><i style="--v: 0.9"></i></b>
+            </div>
+            <div class="bar">
+              <span>Защита от обмана</span><b><i style="--v: 0.95"></i></b>
+            </div>
+            <div class="bar">
+              <span>Скорость ответа</span><b><i style="--v: 0.55"></i></b>
+            </div>
+            <div class="bar">
+              <span>Работа офлайн</span><b><i style="--v: 0.05"></i></b>
+            </div>
+          </div>
+          <div class="side">
+            <h3>В браузере</h3>
+            <p>
+              Web Worker для JS, Pyodide (Python в WebAssembly), песочница
+              iframe.
+            </p>
+            <div class="bar">
+              <span>Нагрузка на сервер</span><b><i style="--v: 0.08"></i></b>
+            </div>
+            <div class="bar">
+              <span>Защита от обмана</span><b><i style="--v: 0.35"></i></b>
+            </div>
+            <div class="bar">
+              <span>Скорость ответа</span><b><i style="--v: 0.9"></i></b>
+            </div>
+            <div class="bar">
+              <span>Работа офлайн</span><b><i style="--v: 0.9"></i></b>
+            </div>
+          </div>
+        </div>
+        <div class="verdict">
+          <b>Выбор: гибрид.</b> Обычные уроки проверяем в браузере, и сервер
+          почти не нагружен. Тяжёлые задачи, рейтинги, собеседования и XP
+          проверяем на сервере: результат из браузера легко подделать.
+        </div>
+      </section>
+
+      <section id="stack" class="wrap">
+        <h2>Стек</h2>
+        <h3 class="gl">Редактор кода</h3>
+        <div class="chips">
+          <span>Monaco Editor</span><span>CodeMirror 6</span>
+        </div>
+        <h3 class="gl">Дорожная карта (граф)</h3>
+        <div class="chips">
+          <span>React Flow</span><span>Cytoscape.js</span><span>D3</span>
+        </div>
+        <h3 class="gl">Запуск кода</h3>
+        <div class="chips">
+          <span>Web Workers</span><span>Pyodide</span><span>Judge0</span
+          ><span>Piston</span><span>Docker</span>
+        </div>
+        <h3 class="gl">AI-ментор</h3>
+        <div class="chips">
+          <span>Claude API</span><span>системный промпт</span>
+        </div>
+        <pre class="prompt">
+Ты — сократовский ментор по программированию.
+Никогда не пиши готовое решение и не исправляй код целиком.
+Задавай один наводящий вопрос за раз, опираясь на код и ошибку ученика.
+Подсказки давай по уровням: вопрос → указание на строку → идея без кода.
+Хвали верные шаги. Если просят ответ — вежливо откажись и предложи следующий шаг.</pre
+        >
+      </section>
+
+      <section id="releases" class="wrap">
+        <h2>Три релиза</h2>
+        <div class="rel reveal">
+          <div class="stage">
+            <span class="dot">1</span>
+            <h3>MVP</h3>
+            <ul>
+              <li>Песочница и запуск кода</li>
+              <li>Автотесты и подсказки</li>
+              <li>Шпаргалки</li>
+              <li>Дорожная карта, XP</li>
+            </ul>
+          </div>
+          <div class="stage">
+            <span class="dot">2</span>
+            <h3>Основной функционал</h3>
+            <ul>
+              <li>AI-ментор и разбор ошибок</li>
+              <li>Комментарии и код-ревью</li>
+              <li>Рейтинги</li>
+              <li>Собеседования, резюме, GitHub</li>
+            </ul>
+          </div>
+          <div class="stage">
+            <span class="dot">3</span>
+            <h3>Вовлечение</h3>
+            <ul>
+              <li>Streak и квесты</li>
+              <li>Битва с боссом, кодинг-тир</li>
+              <li>Магазин и питомцы</li>
+              <li>Пасхалки и ARG</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="secrets" class="wrap">
+        <h2>Секреты</h2>
+        <p class="lead">На сайте спрятаны пасхалки из игр. Подсказки:</p>
+        <ul class="hints">
+          <li>Fortnite — старый код Konami: ↑ ↑ ↓ ↓ ← → ← → B A</li>
+          <li>GTA 5 — набери на клавиатуре три буквы: g t a</li>
+          <li>
+            Конами ещё и включает киберпанк-тему (повтори код, чтобы вернуть)
+          </li>
+          <li>Песочница — напиши в редакторе: /do a barrel roll</li>
+          <li>Потерялся? Открой 404.html — там змейка ест баги</li>
+          <li>CS2 — кликни по логотипу viesdi в меню 5 раз</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© Viesdi. Знания для программирования.</footer>
+
+    <script src="style/smooth.js"></script>
+    <script src="style/script.js"></script>
+  </body>
+</html>
